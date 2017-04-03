@@ -1,0 +1,15 @@
+let () =
+  try Topdirs.dir_directory (Sys.getenv "OCAML_TOPLEVEL_PATH")
+  with Not_found -> ()
+;;
+
+#use "topfind";;
+#thread;;
+#warnings "+43+6"
+#ppx "ppx-jane -as-ppx";;
+#require "core.top";;
+(* #require "core_extended";; *)
+
+#directory "_build";;
+
+open Core.Std

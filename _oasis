@@ -10,7 +10,7 @@ Library blah
   Path:       src
   BuildTools: ocamlbuild
   Modules:    Blah 
-  BuildDepends: core
+  BuildDepends: core (>= 113.33.02)
 
 Executable hello_world
   Path:       src
@@ -18,7 +18,7 @@ Executable hello_world
   MainIs:     hello_world.ml
   CompiledObject: native
   Install: true
-  BuildDepends: core, blah
+  BuildDepends: blah, core (>= 113.33.02)
 
 Executable test_all
   Build$:     flag(tests)
@@ -27,7 +27,7 @@ Executable test_all
   MainIs:     test_blah.ml
   CompiledObject: byte
   Install: false
-  BuildDepends: core, blah, oUnit (>= 2.0.0)
+  BuildDepends: blah, core (>= 113.33.02), oUnit (>= 2.0.0)
 
 Test test_all
   Run$: flag(tests)

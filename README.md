@@ -16,6 +16,7 @@ opam install utop merlin ocp-indent core core_extended ounit oasis
 # Branch core+corebuild
 
 ```
+git checkout core+corebuild
 corebuild hello_world.native
 corebuild test_blah.byte
 ```
@@ -23,6 +24,7 @@ corebuild test_blah.byte
 # Branch core+oasis
 
 ```
+git checkout core+oasis
 oasis setup -setup-update dynamic
 git add setup.ml Makefile configure
 ./configure --enable-tests

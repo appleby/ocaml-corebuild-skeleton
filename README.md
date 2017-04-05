@@ -31,3 +31,13 @@ git add setup.ml Makefile configure
 make
 make test
 ```
+
+# Branch core+oasis+opam
+
+```
+git checkout core+oasis+opam
+opam install oasis2opam
+oasis2opam --local
+opam pin add blah . -n
+opam pin remove blah
+```

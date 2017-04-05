@@ -1,0 +1,41 @@
+OASISFormat: 0.4
+Name:        Blah
+Version:     0.1
+Synopsis:    Blah description
+Authors:     Mike Appleby
+License:     MIT
+Plugins:     META (0.4), DevFiles (0.4)
+
+Library blah
+  Path:       src
+  BuildTools: ocamlbuild
+  Modules:    Blah 
+  BuildDepends: core
+
+Executable hello_world
+  Path:       src
+  BuildTools: ocamlbuild
+  MainIs:     hello_world.ml
+  CompiledObject: native
+  Install: true
+  BuildDepends: core, blah
+
+Executable test_all
+  Build$:     flag(tests)
+  Path:       test
+  BuildTools: ocamlbuild
+  MainIs:     test_blah.ml
+  CompiledObject: byte
+  Install: false
+  BuildDepends: core, blah, oUnit (>= 2.0.0)
+
+Test test_all
+  Run$: flag(tests)
+  TestTools: test_all
+  Command: $test_all
+  WorkingDirectory: test
+
+SourceRepository "blah github"
+  Type:     git
+  Location: ssh://git@github.com:appleby/ocaml-skeleton.git
+  Branch: master

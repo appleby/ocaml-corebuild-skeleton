@@ -1,2 +1,4 @@
-true: package(oUnit)
 true: thread,debug
+
+# OASIS_START
+# OASIS_STOP

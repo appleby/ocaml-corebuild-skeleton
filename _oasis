@@ -2,8 +2,12 @@ OASISFormat: 0.4
 Name:        Blah
 Version:     0.1
 Synopsis:    Blah description
+Description: Blah description
 Authors:     Mike Appleby
+Maintainers: Mike Appleby <mike@app.leby.org>
 License:     MIT
+Homepage:    https://gitub.com/appleby/ocaml-skeleton
+BugReports:  https://github.com/appleby/ocaml-skeleton/issues
 Plugins:     META (0.4), DevFiles (0.4)
 
 Library blah

@@ -10,7 +10,7 @@ Simple skeleton for ocaml projects. See `git branch -a` for variations on the th
 opam init
 eval `opam config env`
 opam switch 4.04.0
-opam install utop merlin ocp-indent core core_extended ounit
+opam install utop merlin ocp-indent core core_extended ounit oasis
 ```
 
 # Branch core+corebuild
@@ -18,4 +18,14 @@ opam install utop merlin ocp-indent core core_extended ounit
 ```
 corebuild hello_world.native
 corebuild test_blah.byte
+```
+
+# Branch core+oasis
+
+```
+oasis setup -setup-update dynamic
+git add setup.ml Makefile configure
+./configure --enable-tests
+make
+make test
 ```

@@ -41,3 +41,13 @@ oasis2opam --local
 opam pin add blah . -n
 opam pin remove blah
 ```
+
+# Branch core+jbuilder+opam
+
+```
+git checkout core+jbuilder+opam
+opam install jbuilder
+jbuilder build bin/hellow_world.exe
+jbuilder build @install
+jbuilder runtest
+```

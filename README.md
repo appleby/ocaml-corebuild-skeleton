@@ -1,4 +1,4 @@
-# ocaml-corebuild-skeleton
+# ocaml-skeleton
 
 Simple skeleton for ocaml projects. See `git branch -a` for variations on the theme.
 

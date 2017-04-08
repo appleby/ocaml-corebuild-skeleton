@@ -1,0 +1,11 @@
+(jbuild_version 1)
+
+(executables
+ ((names (test_blah))
+  (libraries (blah core oUnit))))
+
+(alias
+ ((name    runtest)
+  (deps    (test_blah.exe))
+  (action  (run ${<}))))
+

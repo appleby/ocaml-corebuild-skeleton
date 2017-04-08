@@ -1,0 +1,9 @@
+(jbuild_version 1)
+
+(executables
+ ((names (hello_world))
+  (libraries (blah core))))
+
+(install
+ ((section bin)
+  (files ((hello_world.exe as hello_world)))))

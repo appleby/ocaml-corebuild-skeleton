@@ -1,0 +1,20 @@
+opam-version: "1.2"
+name: "Blah"
+version: "0.1"
+maintainer: "Mike Appleby <mike@app.leby.org>"
+authors: [ "Mike Appleby" ]
+license: "MIT"
+homepage: "https://gitub.com/appleby/ocaml-skeleton"
+dev-repo: "ssh://git@github.com:appleby/ocaml-skeleton.git"
+bug-reports: "https://github.com/appleby/ocaml-skeleton/issues"
+build: [
+  ["jbuilder" "build" "--only" "hello_world" "--root" "." "-j" jobs "@install"]
+]
+build-test: [
+  ["jbuilder" "runtest"]
+]
+depends: [
+  "core" {>= "113.33.02"}
+  "jbuilder" {build & >= "1.0.0"}
+  "ounit" {test & >= "2.0.0"}
+]

@@ -1,6 +1,8 @@
-S src/
+S lib/
+S bin/
 S test/
-B _build/src
+B _build/default/bin
+B _build/default/lib
 PKG core
 PKG oUnit
 FLG -w A-4-33-40-41-42-43-34-44 
